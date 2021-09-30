@@ -3,25 +3,19 @@
 //confirm
 //prompt
 //= == ===
-let numberOffilms = prompt("Сколько фильмов вы уже посмотрели?");
+const numberOffilms = prompt("Сколько фильмов вы уже посмотрели?");
 const personalMovieDB = {
   count: numberOffilms,
-  movies: {
-
-  },
-  actors: {
-
-  },
-  genres: [
-
-  ],
+  movies: {},
+  actors: {},
+  genres: [],
   privat: false
 };
 
-for(let i = 0; i < numberOffilms; i++){
-  let namemv = prompt("Один из последних просмотренных фильмов?");
-  let mark = prompt("На сколько оцените его?");
+for(let i = 0; i < 2; i++){
+  const namemv = prompt("Один из последних просмотренных фильмов?");
+  const mark = prompt("На сколько оцените его?");
   personalMovieDB.movies[namemv] = mark;
 }
 
-console.log(personalMovieDB.movies);
+console.log(personalMovieDB);
