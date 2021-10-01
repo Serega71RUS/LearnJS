@@ -17,7 +17,9 @@
 //Math.round([число]) Округление числа
 //parseInt([string]) Преобразование числа из строки в Int
 //parseFloat([string]) Преобразование числа из строки в Float
-
+//function CaBa(arg1, callback){callback();}
+//function func1(){};
+//CaBa(arg1, func1);
 
 let numberOffilms;
 
@@ -29,11 +31,11 @@ const personalMovieDB = {
   privat: false
 };
 
-start();
-rememberMyFilms();
-detectPersonalLevel();
-writeYourGenres();
-showMyDB();
+// start();
+// rememberMyFilms();
+// detectPersonalLevel();
+// writeYourGenres();
+// showMyDB();
 
 function start() {
   numberOffilms = +prompt(`Сколько фильмов вы уже посмотрели?`);
