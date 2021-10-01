@@ -4,6 +4,21 @@
 //prompt
 //= == ===
 //for, while(условие)[действия,], do[действия]while(условие)
+//function [name]([arg1, arg2]) {....} Используется везде
+//const(let) [name] = function([arg1, arg2]) { return ....}; После объявления
+//const(let) [name] = (arg, arg2) => { return .....}; 
+//[string].slice([a],[b]); Вырезание из строки от a до b (возможны отрицательные значения(-6, -1), идет отсчет с конца строки)
+//[string].substring([a],[b]); Вырезание из строки от a до b
+//[string].substr([a],[b]); Вырезание из строки от a b кол-во символов
+//[string].indexOf(`a`); Получение индекса первого совпадающего элемента `a` в строке
+//[string].toUpperCase(); Строку в верхний регистр
+//[string].toLowerCase(); Строку в нижний регистр
+//[string].[i] получение значения i-того элемента в строке
+//Math.round([число]) Округление числа
+//parseInt([string]) Преобразование числа из строки в Int
+//parseFloat([string]) Преобразование числа из строки в Float
+const str = `Hello hWorhld!`;
+console.log(str.indexOf(`h`));
 const numberOffilms = +prompt("Сколько фильмов вы уже посмотрели?");
 const personalMovieDB = {
   count: numberOffilms,
