@@ -4,7 +4,7 @@
 //prompt
 //= == ===
 //for, while(условие)[действия,], do[действия]while(условие)
-const numberOffilms = prompt("Сколько фильмов вы уже посмотрели?");
+const numberOffilms = +prompt("Сколько фильмов вы уже посмотрели?");
 const personalMovieDB = {
   count: numberOffilms,
   movies: {},
@@ -41,12 +41,16 @@ if(personalMovieDB.count < 10){
   console.log(`Просмотрено довольно мало фильмов`);
 }
 else{
-  if(personalMovieDB.count > 10 && personalMovieDB.count < 30){
+  if(personalMovieDB.count >= 10 && personalMovieDB.count < 30){
     console.log(`Вы классный зритель`);
   }
-  else{
-    console.log(`Вы киноман`);
-  }
+  else 
+    if(personalMovieDB.count >= 30){
+      console.log(`Вы киноман`);
+    }
+    else {
+      console.log(`Произошла ошибка`);
+    }
 }
 
 console.log(personalMovieDB);
