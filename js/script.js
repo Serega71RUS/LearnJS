@@ -34,6 +34,10 @@
 //2. соединение двух объектов: const newObj = Object.assign({}, oldObj);
 //3. const newArray = oldArray.slice();
 //4. const newArray = [...oldArray]; const newObj = {...OldObj};
+//ООП
+//Прототипно-ориентированное наследование:
+//Object.setPrototypeOf(john, solider); Объекту john присваиваем прототип solider
+//const john = Object.create(solider); Создаем объект john, который является прототипом от объекта solider
 
 let numberOffilms;
 
