@@ -20,6 +20,20 @@
 //function CaBa(arg1, callback){callback();}
 //function func1(){};
 //CaBa(arg1, func1);
+//[array].push([elem]) добавить элемент в конец массива
+//[array].pop([elem]) удалить последний элемент из массива
+//[array].split([razd]) делает из строки массив, разделитель
+//[array].join([razd]) делает из массива строку, разделитель
+//delete.[array][n] удаление n-ного элемента из массива
+//[array].splice(index, count, elem1) заменять count элементов в массиве, начиная с index, на elem1
+//[array].slice(begin, end) копирует часть массива с begin до end, end не включая, если без аргументов, то копируется весь массив
+//[array].sort(func) соритровка массива, если не передать func, то сортирует элементы как строки
+//[array].reverse() меняет порядок элементов на обратный
+//копиирование объектов (поверхносное копирование):
+//1. создать функцию с перебором for in
+//2. соединение двух объектов: const newObj = Object.assign({}, oldObj);
+//3. const newArray = oldArray.slice();
+//4. const newArray = [...oldArray]; const newObj = {...OldObj};
 
 let numberOffilms;
 
@@ -74,7 +88,7 @@ function detectPersonalLevel() {
   }
   else{
     if(personalMovieDB.count >= 10 && personalMovieDB.count < 30){
-      console.log(`Вы классный зритель`);
+      console.log(`Вы классический зритель`);
     }
     else 
       if(personalMovieDB.count >= 30){
