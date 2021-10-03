@@ -22,6 +22,7 @@
 //CaBa(arg1, func1);
 //[array].push([elem]) добавить элемент в конец массива
 //[array].pop([elem]) удалить последний элемент из массива
+//[array].indexOf(elem) возвращает номер первого найденного элемента в массиве
 //[array].split([razd]) делает из строки массив, разделитель
 //[array].join([razd]) делает из массива строку, разделитель
 //delete.[array][n] удаление n-ного элемента из массива
@@ -39,19 +40,17 @@
 //Object.setPrototypeOf(john, solider); Объекту john присваиваем прототип solider
 //const john = Object.create(solider); Создаем объект john, который является прототипом от объекта solider
 
-let numberOffilms;
-
 const personalMovieDB = {
-  count: numberOffilms,
+  count: 0,
   movies: {},
   actors: {},
   genres: [],
   privat: false,
 
   start: function() {
-    numberOffilms = +prompt(`Сколько фильмов вы уже посмотрели?`);
-    while(numberOffilms == '' || numberOffilms == null || isNaN(numberOffilms)) {
-      numberOffilms = +prompt(`Сколько фильмов вы уже посмотрели?`);
+    personalMovieDB.count = +prompt(`Сколько фильмов вы уже посмотрели?`);
+    while(personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+      personalMovieDB.count = +prompt(`Сколько фильмов вы уже посмотрели?`);
     }
   },
 
@@ -69,7 +68,7 @@ const personalMovieDB = {
     }
   },
 
-  writeYourGenres: function(callback) {
+  writeYourGenres: function() {
     for(let i = 0; i < 3; i++){
       let genre = prompt(`Ваш любимый жанр под номером ${i+1}`);
       while(genre == `` || genre == null ){
@@ -80,12 +79,24 @@ const personalMovieDB = {
     personalMovieDB.genres.forEach(element => {
       console.log(`Любимый жанр #${personalMovieDB.genres.indexOf(element)+1}, - это ${element}`)
     });
-  },
 
-  forEach: function() {
-    personalMovieDB.genres.forEach(element => {
-      console.log(`Любимый жанр #${key.element}, ${element}`)
-    });
+    // personalMovieDB.genres.forEach((item, i) => {
+    //   console.log(`Любимый жанр #${i+1}, - это ${item}`);
+    // });
+
+    // for(let i = 0; i < 2; i++)
+    // {
+    //   let genres = prompt(`Введите ваши любимые жанры через запятую`).toLowerCase();
+    //   if(genres == `` || genres == null) {
+    //     console.log(`Вы ввели некорректные данные или не ввели вовсе`);
+    //     i--;
+    //   }
+    //   else{
+    //     personalMovieDB.genres = genres.split(`, `);
+    //     personalMovieDB.genres.sort();
+    //   }
+    // }
+
   },
 
   detectPersonalLevel: function() {
@@ -112,16 +123,16 @@ const personalMovieDB = {
     }
   },
 
-  toggleVisibleMyDB: function(privat) {
-    if(privat){
-      privat = false;
+  toggleVisibleMyDB: function() {
+    if(personalMovieDB.privat){
+      personalMovieDB.privat = false;
     }
     else{
-      privat = true;
+      personalMovieDB.privat = true;
     }
   }
 };
 
-personalMovieDB.writeYourGenres(personalMovieDB.forEach);
-personalMovieDB.toggleVisibleMyDB(personalMovieDB.privat);
+personalMovieDB.writeYourGenres();
+personalMovieDB.toggleVisibleMyDB();
 personalMovieDB.showMyDB();
