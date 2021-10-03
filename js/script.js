@@ -39,6 +39,10 @@
 //Прототипно-ориентированное наследование:
 //Object.setPrototypeOf(john, solider); Объекту john присваиваем прототип solider
 //const john = Object.create(solider); Создаем объект john, который является прототипом от объекта solider
+//Dynamic Type
+//To String: 1) String([elem]); 2) [elem] + '';
+//To Number: 1) Number([elem]); 2) +[elem]; 3) parseInt([elem], 10); 10 - десятичная система; 
+//To Boolean: false: 0, '', null, undefined, NaN; 1) if([elem]){}; 2) Boolean([elem]); 3) !![elem];
 
 const personalMovieDB = {
   count: 0,
