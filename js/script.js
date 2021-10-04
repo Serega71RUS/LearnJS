@@ -4,6 +4,7 @@
 //prompt
 //= == ===
 //for, while(условие)[действия,], do[действия]while(условие)
+//[array].forEach(item, poryadNum, ssilka) => {};
 //function [name]([arg1, arg2]) {....} Используется везде
 //const(let) [name] = function([arg1, arg2]) { return ....}; После объявления
 //const(let) [name] = (arg, arg2) => { return .....}; 
@@ -45,6 +46,31 @@
 //To Boolean: false: 0, '', null, undefined, NaN; 1) if([elem]){}; 2) Boolean([elem]); 3) !![elem];
 //И запинается на лжи
 //ИЛИ запинается на правде
+//
+//Получение элементов со страницы:
+//1)document.getElementById('id'); Вывод элемента с определенным id
+//2)document.getElementByTagName('button'); Вывод всех элементов в псевдомассив
+//3)document.getElementByClassName('class'); Вывод всех элементов в псевдомассив
+//4)document.querySelectorAll('.class'); Вывод всех элементов в псевдомассив с методом forEach
+//5)document.querySelector('.class'); Вывод первого совпавшего элемента
+//
+//Применение стилей
+//[box].style.backgroundColor = 'blue'; Изменение одного свойства в элементе 
+//[box].style.cssText = 'background-color: blue; width: 500px'; Изменение нескольких свойств в элементе
+//hearts.forEach(item => {item.backgroundColor = '#ccc'}); Добавление свойства в несколько элементов в псевдомассивах
+//const div = document.createElement('div'); Создание элемента 
+//div.classList.add('black'); Добавление к элементу класса black
+//wrapper.append(div); Добавить элемент div в конец псевдомассива wrapper
+//wrapper.prepand(div); Добавить элемент div в начало псевдомассива wrapper
+//hearts[0].before(div); Добавить элемент div перед элементом hearts[0]
+//hearts[0].after(div); Добавить элемент div после элемента hearts[0]
+//hearts[0].remove(); Удаление элемента
+//hearts[0].replaceWith(circles[0]); Замена hearts на circles
+//div.innerHTML = '<h1>hello</h1>'; Добавление html кода на страницу
+//div.textContent = 'Hello'; Добавление текста на страницу
+//div.insertAdjacentHTML('prpertie', '[html code]'); Свойство когда добавлялть перед началом/перед концом/после начала/после конца
+
+
 
 const personalMovieDB = {
   count: 0,
