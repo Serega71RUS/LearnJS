@@ -51,8 +51,9 @@
 //1)document.getElementById('id'); Вывод элемента с определенным id
 //2)document.getElementByTagName('button'); Вывод всех элементов в псевдомассив
 //3)document.getElementByClassName('class'); Вывод всех элементов в псевдомассив
-//4)document.querySelectorAll('.class'); Вывод всех элементов в псевдомассив с методом forEach
+//4)wrapper = document.querySelectorAll('.class'); Вывод всех элементов в псевдомассив с методом forEach
 //5)document.querySelector('.class'); Вывод первого совпавшего элемента
+//6)hearts = wrapper.querySelectorAll('.class'); Не обязательно обращаться ко всему документу для получения определенных элементов
 //
 //Применение стилей
 //[box].style.backgroundColor = 'blue'; Изменение одного свойства в элементе 
@@ -68,7 +69,7 @@
 //hearts[0].replaceWith(circles[0]); Замена hearts на circles
 //div.innerHTML = '<h1>hello</h1>'; Добавление html кода на страницу
 //div.textContent = 'Hello'; Добавление текста на страницу
-//div.insertAdjacentHTML('prpertie', '[html code]'); Свойство когда добавлялть перед началом/перед концом/после начала/после конца
+//div.insertAdjacentHTML('prpertie', '[html code]'); Свойство когда добавлялть: перед началом/перед концом/после начала/после конца
 
 
 
