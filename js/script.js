@@ -52,7 +52,7 @@
 //2)document.getElementByTagName('button'); Вывод всех элементов в псевдомассив
 //3)document.getElementByClassName('class'); Вывод всех элементов в псевдомассив
 //4)wrapper = document.querySelectorAll('.class'); Вывод всех элементов в псевдомассив с методом forEach
-//5)document.querySelector('.class'); Вывод первого совпавшего элемента
+//5)document.querySelector('.class'); Вывод первого совпавшего элемента .class #id
 //6)hearts = wrapper.querySelectorAll('.class'); Не обязательно обращаться ко всему документу для получения определенных элементов
 //
 //Применение стилей
@@ -81,6 +81,29 @@
 //event.preventDefault(); Отмена стандартных действий, достпных в браузере
 //btns.forEach(btn => {btn.addEventLisntener('click', deleteElem, {once: true})}); Конструкция для присвоения события к нескольким элементам
 //{once: true} аргумент, который говорит, что нужно выполнить событие только один раз
+//
+//Навигация по DOM
+//document.documentElement получение полной html страницы
+//document.head получь содержимое элемента head
+//document.body.childNodes получение узлов-детей элемента body
+//for(let node of document.body.childNodes){
+  //if(node.nodeName == '#text'){
+      //continue;
+  //} Цикл, который оставляет одни элементы и убирает узлы
+//} 
+//document.body.firstChild получение первого узла-ребенка
+//document.body.firstElementChild получение первого элемента-ребенка
+//document.body.lastChild получение последнего узла-ребенка
+//document.body.lastElementChild получение последнего элемента-ребенка
+//document.querySelector('#id').parentNode получение родителя-узла относительно ребенка(поиск ребенка по id)
+//document.querySelector('#id').parentElement получение родителя-элемента относительно ребенка(поиск ребенка по id)
+//<li data-current="3">3</li> data-[any text] оставление меток, для последующего ориентирования в html документе
+//document.querySelector('[data-current="3"]') обращение к этой метке 
+//document.querySelector('[data-current="3"]').nextSibling получение следующего соседа-узла относительно метки
+//document.querySelector('[data-current="3"]').nextElementSibling получение следующего соседа-элемента относительно метки
+//document.querySelector('[data-current="3"]').previousSibling получение предидущего соседа-узла относительно метки 
+//document.querySelector('[data-current="3"]').previousElementSibling получение предидущего соседа-элемента относительно метки 
+
 
 
 
