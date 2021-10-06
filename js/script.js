@@ -58,6 +58,7 @@
 //Применение стилей
 //[box].style.backgroundColor = 'blue'; Изменение одного свойства в элементе 
 //[box].style.cssText = 'background-color: blue; width: 500px'; Изменение нескольких свойств в элементе
+//[class][0].style..... При обращении к классу необходимо указать номер элемента в массиве
 //hearts.forEach(item => {item.backgroundColor = '#ccc'}); Добавление свойства в несколько элементов в псевдомассивах
 //const div = document.createElement('div'); Создание элемента 
 //div.classList.add('black'); Добавление к элементу класса black
@@ -70,6 +71,17 @@
 //div.innerHTML = '<h1>hello</h1>'; Добавление html кода на страницу
 //div.textContent = 'Hello'; Добавление текста на страницу
 //div.insertAdjacentHTML('prpertie', '[html code]'); Свойство когда добавлялть: перед началом/перед концом/после начала/после конца
+//
+//События
+//cons btn = document.querySelector('button'); Нужен элемент, на который будем вешать событие
+//btn.addEventListener('click', (event, other elements) => {}); Создание обработчика событий, event-описывает, что прозошло с элементом
+//e.target вывести элемент html
+//btn.removeEventListener('click', [callback function]deleteElem); deleteElem - функция объявленная ранее
+//e.currentTarget вызов конкретного элемента
+//event.preventDefault(); Отмена стандартных действий, достпных в браузере
+//btns.forEach(btn => {btn.addEventLisntener('click', deleteElem, {once: true})}); Конструкция для присвоения события к нескольким элементам
+//{once: true} аргумент, который говорит, что нужно выполнить событие только один раз
+
 
 
 
