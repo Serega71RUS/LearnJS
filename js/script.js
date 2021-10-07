@@ -132,6 +132,28 @@
   //script.async = false; Созданные скрипты автоматически загружаются параллельно и никого не ждут
   //document.body.append(script);
 //}
+//
+//
+//Глава 3
+//
+//ClassList, Делегирование событий
+//btns - псевдомассив
+//btns[0].classList.add('red', 'blue'); Добавление CSS класса red в первую кнопку; Можно передавать несколько параметров
+//btns[0].classList.remove('red'); Удаление CSS класса red из первой кнопки
+//btns[0].classList.toggle('red'); Добавление CSS класса red в первую кнопку и удаление, если он есть
+//if(btns[0].classList.contains('red')){} Проверка, есть ли CSS класс red в первой кнопке
+//Реализация выпадающего меню при нажатии на кнопку
+//btns[0].addEventListener('click', () => {
+  //if(!btns[1].classList.contains('red')){ Если у кнопки нет класса red
+    //btns[1].classList.add('red'); Добавляем класс red
+  //}
+  //else{ Иначе, если этот класс у нее есть
+    //btns[1].classList.remove('red'); Удаляем класс red из кнопки
+  //}
+//});
+//btns[1].classList.toggle('red'); 
+//
+
 
 
 
