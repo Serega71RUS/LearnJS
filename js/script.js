@@ -153,6 +153,15 @@
 //});
 //btns[1].classList.toggle('red'); 
 //
+//Таймеры
+//setTimeout(function, timems) Запускать функцию через timems один раз
+//const timerID = setInterval(function, timems) Запускать функцию через timems пока не остановят
+//clearInterval(timerID) Передается название таймера
+//Создание нормального таймера вручную
+//let id = setTimeout(function log(){
+  //console.log(); Действия в таймере
+  //id = setTimeout(log, 500); Рекурсивный вызов таймера снова
+//}, 500);
 
 
 
