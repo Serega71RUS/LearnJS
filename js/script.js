@@ -8,6 +8,7 @@
 //function [name]([arg1, arg2]) {....} Используется везде
 //const(let) [name] = function([arg1, arg2]) { return ....}; После объявления
 //const(let) [name] = (arg, arg2) => { return .....}; 
+//
 //[string].slice([a],[b]); Вырезание из строки от a до b (возможны отрицательные значения(-6, -1), идет отсчет с конца строки)
 //[string].substring([a],[b]); Вырезание из строки от a до b
 //[string].substr([a],[b]); Вырезание из строки от a b кол-во символов
@@ -15,12 +16,15 @@
 //[string].toUpperCase(); Строку в верхний регистр
 //[string].toLowerCase(); Строку в нижний регистр
 //[string].[i] получение значения i-того элемента в строке
+//
 //Math.round([число]) Округление числа
 //parseInt([string]) Преобразование числа из строки в Int
 //parseFloat([string]) Преобразование числа из строки в Float
+//
 //function CaBa(arg1, callback){callback();}
 //function func1(){};
 //CaBa(arg1, func1);
+//
 //[array].push([elem]) добавить элемент в конец массива
 //[array].pop([elem]) удалить последний элемент из массива
 //[array].indexOf(elem) возвращает номер первого найденного элемента в массиве
@@ -31,11 +35,13 @@
 //[array].slice(begin, end) копирует часть массива с begin до end, end не включая, если без аргументов, то копируется весь массив
 //[array].sort(func) соритровка массива, если не передать func, то сортирует элементы как строки
 //[array].reverse() меняет порядок элементов на обратный
+//
 //копиирование объектов (поверхносное копирование):
 //1. создать функцию с перебором for in
 //2. соединение двух объектов: const newObj = Object.assign({}, oldObj);
 //3. const newArray = oldArray.slice();
 //4. const newArray = [...oldArray]; const newObj = {...OldObj};
+//
 //ООП
 //Прототипно-ориентированное наследование:
 //Object.setPrototypeOf(john, solider); Объекту john присваиваем прототип solider
@@ -102,7 +108,30 @@
 //document.querySelector('[data-current="3"]').nextSibling получение следующего соседа-узла относительно метки
 //document.querySelector('[data-current="3"]').nextElementSibling получение следующего соседа-элемента относительно метки
 //document.querySelector('[data-current="3"]').previousSibling получение предидущего соседа-узла относительно метки 
-//document.querySelector('[data-current="3"]').previousElementSibling получение предидущего соседа-элемента относительно метки 
+//document.querySelector('[data-current="3"]').previousElementSibling получение предидущего соседа-элемента относительно метки
+//
+//События на мобилках
+//touchstart Палец прикоснулся к объекту
+//touchmove Палец двигается в пределах объекта
+//touchend Палец отпустил объект
+//touchenter Срабатывает, как только палец зашел за пределы элемента
+//touchleave Срабатывает, как только палец вышел за пределы элемента
+//touchcancel Срабатывает, как только палец вышел за пределы страницы
+//Свойства
+//touches Получить количество пальцев, не важно где находятся
+//targetTouches Получить количество пальцев, которые косаются именно этого объекта
+//changedTouches Список пальцев, учавствующих в текущем событии
+//
+//Async, defer, параллельная загрузка скриптов
+//<script defer src="js/script.js"> Загрузка скрипта параллельно, если несколько, то загружаются последовательно, ждет DOM-дерево
+//<script async src="js/script.js"> Загрзка скрипта параллельно, никого не ждет, как загрузился, сразу выполняется
+//Создание функции для загрузки скриптов
+//function loadScript(src) {
+  //const script = document.CreateElement('script');
+  //script.scr = src;
+  //script.async = false; Созданные скрипты автоматически загружаются параллельно и никого не ждут
+  //document.body.append(script);
+//}
 
 
 
