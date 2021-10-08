@@ -189,6 +189,42 @@
 //document.documentElement.scrollTop Сколько px пользователь пролестал вверх, работает для страницы, можно изменить
 //window.scrollBy(x, y) Скролит на y px вниз относительно текущего положения
 //window.scrollTo(x, y) Скролит на y px вниз относительно начала документа; можно сделать стрелку "Вверх"
+//
+//This
+//Функция конструктор:
+//function User(name, id) {
+  //this.name = name,
+  //this.id = id,
+  //this.human = true,
+  //this.hello = function() {
+    //console.log(`Hello ${this.name}`)
+  //};
+//}
+//
+//function sayName(surname) {
+  //console.log(this);
+  //console.log(this.name + surname);
+//}
+//const user = {
+  //name: 'John'
+//}
+//sayName.call(user, 'Smith', ..., ...); Идет передача аргументов через ,
+//sayName.apply(user, ['Smith', ..., ...]) Идет передача аргументов в виде массива
+//
+//function count(num){ 
+  //return this*num; функция удваивания числа
+//}
+//const double = count.bind(2); bind создает новую функцию из двух других
+//console.log(double(3));
+//Пример стрелочной функции в одну строчку
+//const double = (a) => a*2;
+//1) Обычная функция: this = windows, но если стоит use strict, то будет undefined
+//2) Контекст у методов объекта это будет сам объект
+//3) this в конструкторах и классах это новый экземаляр объекта
+//4) Ручная привязка this: call, apply, bind
+//Если обработчик события написан в классическом режиме('click', function(){}), то контекст вызова будет возвращать сам элемент
+//на котором происходит событие; как event.target
+//У стрелочной функции нет своего контекста вызова, она его возьмет у родителя
 
 "use strict";
 
@@ -228,8 +264,10 @@ const personalMovieDB = {
       }
       personalMovieDB.genres[i] = genre;
     }
+
     personalMovieDB.genres.forEach(element => {
-      console.log(`Любимый жанр #${personalMovieDB.genres.indexOf(element)+1}, - это ${element}`)
+      console.log(`Любимый жанр ${personalMovieDB.genres.indexOf(element+1)}, - это ${element}`);
+      //console.log(`Любимый жанр ${personalMovieDB.genres.indexOf(element)+1}, - это ${element}`);
     });
 
     // personalMovieDB.genres.forEach((item, i) => {
