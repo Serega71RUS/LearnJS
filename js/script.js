@@ -225,6 +225,35 @@
 //Если обработчик события написан в классическом режиме('click', function(){}), то контекст вызова будет возвращать сам элемент
 //на котором происходит событие; как event.target
 //У стрелочной функции нет своего контекста вызова, она его возьмет у родителя
+//
+//Class
+//class Name {
+  //constructor(height, width) { Создание конструктора
+  //this.height = height;
+  //this.width = width;
+  //
+  //calcArea() { Метод в классе
+      //return this.height * this.width;
+    //}
+  //}
+//}
+//const square = new Name(10, 10);
+//console.log(square.calcArea());
+//class NewName extands Name { наследование класса
+  //constructor(height, width, text, bgColor) {
+    //super(height, width); Вызвает строки конструктора родителя; super должна быть на первом месте в конструкторе, 
+      //в скобках прописываются свойства из конструктора родителя, которые будут нужны
+    //this.text = text;
+    //this.bgColor = bgColor;
+    //
+    //showMyProps() {
+      //console.log(`Текст: ${this.text}, цвет: ${this.bgColor}`);
+    //}
+  //}
+//}
+//const div = new NewName(25, 10, 'Hello World!', 'red'); Объявляем элемент класса
+//div.showMyProps(); вызываем метод
+//console.log(div.calcArea());
 
 "use strict";
 
