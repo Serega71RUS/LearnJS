@@ -2,8 +2,8 @@
 //
 //JSON
 //JSON.stringify([obj]) создание json из объекта
-//JSON.parse(JSONObj) перевод изи json в обычный объект
-//JSON.pare(JSON.stringify([obj])) Полная копия объекта, со всеми вложенными элементами
+//JSON.parse(JSONObj) перевод из json в обычный объект
+//JSON.parse(JSON.stringify([obj])) Полная копия объекта, со всеми вложенными элементами
 //
 //Отправка GET запроса
 //JSON file:
@@ -42,6 +42,16 @@
 //В метод all передаются Промисы, и как только они все выполняться, произойдут действия описанные в then
 //Promise.race([test(1000), test(2000)]).then(()=>{});
 //В метод race передаются Промисы, и как только хотя бы один из них выполнится, то произодет действие описанное в then
-
+//
+//Fetch
+//fetch('url', { создание fetch функции
+    //method: "POST",  //если нужен GET, то эти все аргументы не нужны, хватит url
+    //body: JSON.stringify({name: 'Alex'}), 
+    //headets: {
+        //'Content-type':'aplication/json'
+    //}
+//})
+//.then(response => response.json()) метод json парсит строку, которая пришла от сервера
+//.then(json => console.log(json)) теперь объект выводится в консоль
 
 
