@@ -28,3 +28,20 @@
         //inputUsd.value = "Что-то пошло не так";
     //}
 //})
+//
+//Promise (try catch finaly)
+//return new Promise(function(resolve, reject){ объявляем новое обещание
+    //if(status == 200) resolve(response) если с сервера пришел норм ответ, то переходим дальше
+    //error = new Error(statusText)
+    //error.code = status
+    //else reject(error) если ошибка, то переходим в блок catch
+//});
+//[func].then(response => {return new Promise}).then().catch(error).finaly()
+//then(data => {}) Должна передаваться функция или создаваться стрелочная
+//Promise.all([test(1000), test(2000)]).then(()=>{});
+//В метод all передаются Промисы, и как только они все выполняться, произойдут действия описанные в then
+//Promise.race([test(1000), test(2000)]).then(()=>{});
+//В метод race передаются Промисы, и как только хотя бы один из них выполнится, то произодет действие описанное в then
+
+
+
